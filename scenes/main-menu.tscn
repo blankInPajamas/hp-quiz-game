@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=3 uid="uid://6obmglklheoq"]
+
+[ext_resource type="Script" uid="uid://ryon1o00sq7r" path="res://scripts/main-menu.gd" id="1_u4kki"]
+[ext_resource type="FontFile" uid="uid://dwbsw8a4advij" path="res://fonts/dum1/dum1.ttf" id="2_u4kki"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hf3n6"]
+bg_color = Color(0.6, 0.6, 0.596078, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xg1py"]
+line_spacing = 1.0
+font = ExtResource("2_u4kki")
+font_size = 250
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4kki"]
+bg_color = Color(0.138034, 0.138034, 0.138034, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xg1py"]
+bg_color = Color(0.137255, 0.137255, 0.137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0u6b5"]
+bg_color = Color(0.137255, 0.137255, 0.137255, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_u4kki")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = -12.0
+offset_top = -9.0
+offset_right = 1928.0
+offset_bottom = 1092.0
+color = Color(0, 0, 0, 1)
+
+[node name="Title Group" type="Node" parent="."]
+
+[node name="Title01" type="Label" parent="Title Group"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -259.0
+offset_top = -930.0
+offset_right = 815.0
+offset_bottom = -417.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_hf3n6")
+text = "HARRY
+POTTER"
+label_settings = SubResource("LabelSettings_xg1py")
+horizontal_alignment = 2
+
+[node name="Title02" type="Label" parent="Title Group"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 394.0
+offset_top = -486.0
+offset_right = 831.0
+offset_bottom = -187.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+text = "quiz"
+label_settings = SubResource("LabelSettings_xg1py")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 214.0
+offset_top = 489.0
+offset_right = 547.0
+offset_bottom = 859.0
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="new_game_btn" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 70)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_u4kki")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_u4kki")
+text = "NEW GAME"
+
+[node name="settings_btn" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 70)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_u4kki")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_xg1py")
+text = "SETTINGS"
+
+[node name="exit_btn" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 70)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_u4kki")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_0u6b5")
+text = "EXIT GAME"
+
+[connection signal="pressed" from="VBoxContainer/new_game_btn" to="." method="_on_new_game_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/exit_btn" to="." method="_on_exit_btn_pressed"]
