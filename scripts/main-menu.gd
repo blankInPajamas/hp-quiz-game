@@ -17,4 +17,5 @@ func _on_exit_btn_pressed() -> void:
 
 
 func _on_new_game_btn_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/loading.tscn")
+	#get_tree().change_scene_to_file("res://scenes/loading.tscn")
+	get_tree().change_scene_to_file("res://scenes/select_menu_01.tscn")

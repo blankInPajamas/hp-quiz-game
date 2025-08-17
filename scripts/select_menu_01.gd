@@ -10,9 +10,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_easy_btn_pressed() -> void:
-	print("Easy btn scene")
-	#get_tree().change_scene_to_file("res://scenes/main-menu.tscn") 
 
 func _on_back_btn_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main-menu.tscn") # Replace with function body.
+
+func _on_easy_btn_pressed() -> void:
+	print("Easy btn scene")
+	get_tree().change_scene_to_file("res://scenes/level_select.tscn") 
+
+func _on_med_btn_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/level_select.tscn") 
+
+func _on_hard_btn_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/level_select.tscn") 
+	
