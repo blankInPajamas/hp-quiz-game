@@ -26,6 +26,7 @@ script = ExtResource("1_2epne")
 
 [node name="back_btn" type="Button" parent="."]
 custom_minimum_size = Vector2(150, 70)
+layout_mode = 0
 offset_left = 83.0
 offset_top = 50.0
 offset_right = 166.0
